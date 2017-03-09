@@ -1,18 +1,45 @@
+
+$(document).ready(function(){
+
 //variables
 //======================
-var topics = ["Wolverine", "Deadpoole", "Jean Grey",];
+var topics = ["Wolverine", "Deadpoole", "Jean"];
 
-var xArray[]
 
-//functions
-//======================
+function addButton() {
+  $("#buttonDump").empty();
+  for (var i = 0; i < topics.length; i++) {
+
+    var button = $("<button>");
+
+      button.append(topics[i]);
+      button.attr("data-mutant", topics[i]);
+
+    $("#buttonDump").append(button);
+  }
+}
+
+
+addButton();
+
+
 
 //main processes
 //======================
 
-$(document).ready(function(){
+//need to render buttons through array - not html
+$("#newMutantButton").on("click", function(){
+   var userInput = $("#mutantInput").val();
+    topics.push(userInput);
+    console.log(topics);
+    addButton();
 
-$("button").on("click", function() {
+    $("#mutantInput").val("");
+});
+
+$("#buttonDump").on("click", "button", function() {
+   
+    addButton();
       // getting the data-mutant attribute
       var xmen = $(this).attr("data-mutant");
       // storing query in the queryURL variablw
