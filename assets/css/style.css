@@ -1,7 +1,17 @@
-html {
-	background-image: url("assets/img/ximg.jpg");
+/*html {
+	background-image: url("../img/cyclops.jpg");
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
 .jumbotron{
-	background-image: url("assets/img/cyclops.jpg")
+	
+
+
+}*/
+
+.jumbotron h1{
+	text-align: center;
 }

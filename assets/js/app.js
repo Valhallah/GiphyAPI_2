@@ -1,3 +1,15 @@
+//variables
+//======================
+var topics = ["Wolverine", "Deadpoole", "Jean Grey",];
+
+var xArray[]
+
+//functions
+//======================
+
+//main processes
+//======================
+
 $(document).ready(function(){
 
 $("button").on("click", function() {
@@ -25,15 +37,14 @@ $("button").on("click", function() {
             var p = $("<p>").text("Rating: " + results[i].rating);
             //creating an image tag and storing it in the variable mutantImg
             var mutantImg = $("<img>");
-            // Setting the src attribute of the image to a property pulled off the result item
+            //setting the img attribute
             mutantImg.attr("src", results[i].images.fixed_height.url);
 
-            // Appending the paragraph and image tag to the animalDiv
+            //appending p and div to mutantDiv
             mutantDiv.append(p);
             mutantDiv.append(mutantImg);
-
-            // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-            $("#gifs-appear-here").prepend(mutantDiv);
+            //prepending mutantDiv 
+            $("#gifDump").prepend(mutantDiv);
           }
         });
     });

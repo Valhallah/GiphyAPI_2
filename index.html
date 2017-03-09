@@ -11,31 +11,32 @@
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
    </head>
    <body>
-  <div class= "container">
-   <div class="jumbotron">
-   </div>
-   <div class="row">
-	<div class="col-md-12">
-      <label>Which Xmen would you like to see today?</label>
-      <input type="text" id="heroInput" class="inputHero"> 
-      <br><br>
-      <div>
-         <button id="addHero" class="newHero">Submit</button>
-       <br><br>
+      <div class= "container">
+      <div class="jumbotron">
+        <h1>X-Men Gifbase</h1>
       </div>
-     </div>
-  <div class="row">
-    <div class="col-md-12">
-      Try me, bub:
-      <button data-mutant="Wolverine">Wolverine</button>
-      <button data-mutant="Gambit">Gambit</button>
-      <button data-mutant="Mystique">Mystique</button>
-     </div>
-  </div>
       <div class="row">
-         <div class="col-md-12" id="gifs-appear-here">
+         <div class="col-md-12">
+            <label>Which Xmen hero or villian would you like to see?</label>
+            <input type="text" id="heroInput" class="inputHero"> 
+            <br><br>
+            <div>
+               <button id="addHero" class="newHero">Submit</button>
+               <br><br>
+            </div>
          </div>
-      </div>
+         <div class="row">
+            <div class="col-md-12">
+               Try me, bub:
+               <button data-mutant="wolverine">Wolverine</button>
+               <button data-mutant="deadpool">Deadpool</button>
+               <button data-mutant="jean grey">Jean Grey</button>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12" id="gifDump">
+            </div>
+         </div>
       </div>
       <script type="text/javascript" src="assets/js/app.js"></script>
    </body>
