@@ -25,7 +25,6 @@ addButton();
 
 //main processes
 //======================
-
 //when we click the submit putton the topic that was entered will be pushed to the array
 $("#newMutantButton").on("click", function(){
    var userInput = $("#mutantInput").val();
@@ -54,6 +53,7 @@ $("#buttonDump").on("click", "button", function() {
         .done(function(response) {
           //we store the data from the ajax response here
           var results = response.data;
+          $("#gifDump").empty();
 
           //loop through through the results
           for (var i = 0; i < results.length; i++) {
@@ -71,6 +71,7 @@ $("#buttonDump").on("click", "button", function() {
             mutantImg.attr("data-animate", results[i].images.fixed_height.url);
             mutantImg.attr("data-state", "still");
             $(mutantImg).addClass("mutantGif");
+            $(mutantImg).attr("id", i);
 
             //appending p and div to mutantDiv
             mutantDiv.append(p);
@@ -79,7 +80,7 @@ $("#buttonDump").on("click", "button", function() {
             $("#gifDump").prepend(mutantDiv);
 
             //when we click the gif
-            $(".mutantGif").on("click", function() {
+            $("#"+i).on("click", function() {
               //if the gif is still
               if ($(this).attr("data-state") == "still") {
                 //animate the gif when clicked
