@@ -42,7 +42,7 @@ $("#buttonDump").on("click", "button", function() {
       // getting the data-mutant attribute
       var xmen = $(this).attr("data-mutant");
       // storing query in the queryURL variablw
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         xmen + "&api_key=dc6zaTOxFJmzC&limit=10";
 
        //ajax call
