@@ -1,4 +1,18 @@
-
-.jumbotron h1{
+html{
+}
+.jumbotron{
+	background-image: url("../img/jtronimg.jpg");
+	height:500px;
+	font-family: 'Anton', sans-serif;
+	color: #fff;
 	text-align: center;
+	font-size: 90px;
+}
+
+
+
+.col-md-12{
+
+	font-size: 20px;
+	background-color: transparent;
 }
